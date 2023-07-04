@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <!DOCTYPE html>
+  <html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Delete Book</title>
+  </head>
+  <body>
+  <h1>Delete Book</h1>
+  <p>Are you sure you want to delete the book: <strong th:text="${book.title}"></strong>?</p>
+  <form th:action="@{/books/delete/{id}(id=${book.id})}" method="post">
+    <button type="submit">Delete</button>
+  </form>
+  <a href="/books">Back to List</a>
+  </body>
+  </html>
+
